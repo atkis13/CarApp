@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace CarApp
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
         DBConnection conn;
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
