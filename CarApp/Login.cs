@@ -31,7 +31,10 @@ namespace CarApp
 
 
                     conn.Open();
-                    MessageBox.Show("connected");
+                    this.Hide();
+                    MainForm mfrom = new MainForm();
+                    mfrom.Show();
+                    
                     
 
                 }
@@ -52,6 +55,7 @@ namespace CarApp
             finally
             {
                 conn.Close();
+                
             }
         }
     }

@@ -50,6 +50,18 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.lbl_type = new System.Windows.Forms.Label();
+            this.lbl_engine = new System.Windows.Forms.Label();
+            this.lbl_design = new System.Windows.Forms.Label();
+            this.lbl_year = new System.Windows.Forms.Label();
+            this.lbl_brand = new System.Windows.Forms.Label();
+            this.lbl_filtre = new System.Windows.Forms.Label();
+            this.lbl_ulei = new System.Windows.Forms.Label();
+            this.lbl_itp = new System.Windows.Forms.Label();
+            this.lbl_rov = new System.Windows.Forms.Label();
+            this.lbl_asig = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btn_load = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -88,6 +100,7 @@
             this.newCarToolStripMenuItem.Name = "newCarToolStripMenuItem";
             this.newCarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.newCarToolStripMenuItem.Text = "New Car";
+            this.newCarToolStripMenuItem.Click += new System.EventHandler(this.newCarToolStripMenuItem_Click);
             // 
             // loadCarToolStripMenuItem
             // 
@@ -100,6 +113,7 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // carOptionsToolStripMenuItem
             // 
@@ -128,11 +142,12 @@
             this.maintanaceToolStripMenuItem.Name = "maintanaceToolStripMenuItem";
             this.maintanaceToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.maintanaceToolStripMenuItem.Text = "Maintanace";
+            this.maintanaceToolStripMenuItem.Click += new System.EventHandler(this.maintanaceToolStripMenuItem_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(480, 120);
+            this.label1.Location = new System.Drawing.Point(466, 163);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 4;
@@ -141,7 +156,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(876, 120);
+            this.label2.Location = new System.Drawing.Point(836, 163);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 5;
@@ -150,7 +165,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(479, 188);
+            this.label3.Location = new System.Drawing.Point(465, 219);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 6;
@@ -159,7 +174,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(479, 223);
+            this.label4.Location = new System.Drawing.Point(465, 254);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 13);
             this.label4.TabIndex = 7;
@@ -168,7 +183,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(479, 258);
+            this.label5.Location = new System.Drawing.Point(465, 289);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 8;
@@ -177,7 +192,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(480, 293);
+            this.label6.Location = new System.Drawing.Point(466, 324);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 9;
@@ -186,7 +201,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(480, 329);
+            this.label7.Location = new System.Drawing.Point(466, 360);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(31, 13);
             this.label7.TabIndex = 10;
@@ -195,7 +210,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(876, 286);
+            this.label8.Location = new System.Drawing.Point(836, 329);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(61, 13);
             this.label8.TabIndex = 14;
@@ -204,7 +219,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(876, 257);
+            this.label9.Location = new System.Drawing.Point(836, 300);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(24, 13);
             this.label9.TabIndex = 13;
@@ -213,7 +228,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(876, 222);
+            this.label10.Location = new System.Drawing.Point(836, 265);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(52, 13);
             this.label10.TabIndex = 12;
@@ -222,7 +237,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(876, 187);
+            this.label11.Location = new System.Drawing.Point(836, 230);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(51, 13);
             this.label11.TabIndex = 11;
@@ -231,17 +246,137 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(876, 317);
+            this.label12.Location = new System.Drawing.Point(836, 360);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(29, 13);
             this.label12.TabIndex = 15;
             this.label12.Text = "Filtre";
+            // 
+            // lbl_type
+            // 
+            this.lbl_type.AutoSize = true;
+            this.lbl_type.Location = new System.Drawing.Point(544, 360);
+            this.lbl_type.Name = "lbl_type";
+            this.lbl_type.Size = new System.Drawing.Size(31, 13);
+            this.lbl_type.TabIndex = 20;
+            this.lbl_type.Text = "Type";
+            // 
+            // lbl_engine
+            // 
+            this.lbl_engine.AutoSize = true;
+            this.lbl_engine.Location = new System.Drawing.Point(544, 324);
+            this.lbl_engine.Name = "lbl_engine";
+            this.lbl_engine.Size = new System.Drawing.Size(40, 13);
+            this.lbl_engine.TabIndex = 19;
+            this.lbl_engine.Text = "Engine";
+            // 
+            // lbl_design
+            // 
+            this.lbl_design.AutoSize = true;
+            this.lbl_design.Location = new System.Drawing.Point(543, 289);
+            this.lbl_design.Name = "lbl_design";
+            this.lbl_design.Size = new System.Drawing.Size(40, 13);
+            this.lbl_design.TabIndex = 18;
+            this.lbl_design.Text = "Design";
+            // 
+            // lbl_year
+            // 
+            this.lbl_year.AutoSize = true;
+            this.lbl_year.Location = new System.Drawing.Point(543, 254);
+            this.lbl_year.Name = "lbl_year";
+            this.lbl_year.Size = new System.Drawing.Size(29, 13);
+            this.lbl_year.TabIndex = 17;
+            this.lbl_year.Text = "Year";
+            // 
+            // lbl_brand
+            // 
+            this.lbl_brand.AutoSize = true;
+            this.lbl_brand.Location = new System.Drawing.Point(543, 219);
+            this.lbl_brand.Name = "lbl_brand";
+            this.lbl_brand.Size = new System.Drawing.Size(35, 13);
+            this.lbl_brand.TabIndex = 16;
+            this.lbl_brand.Text = "Brand";
+            // 
+            // lbl_filtre
+            // 
+            this.lbl_filtre.AutoSize = true;
+            this.lbl_filtre.Location = new System.Drawing.Point(917, 360);
+            this.lbl_filtre.Name = "lbl_filtre";
+            this.lbl_filtre.Size = new System.Drawing.Size(29, 13);
+            this.lbl_filtre.TabIndex = 25;
+            this.lbl_filtre.Text = "Filtre";
+            // 
+            // lbl_ulei
+            // 
+            this.lbl_ulei.AutoSize = true;
+            this.lbl_ulei.Location = new System.Drawing.Point(917, 329);
+            this.lbl_ulei.Name = "lbl_ulei";
+            this.lbl_ulei.Size = new System.Drawing.Size(61, 13);
+            this.lbl_ulei.TabIndex = 24;
+            this.lbl_ulei.Text = "Schimb ulei";
+            // 
+            // lbl_itp
+            // 
+            this.lbl_itp.AutoSize = true;
+            this.lbl_itp.Location = new System.Drawing.Point(917, 300);
+            this.lbl_itp.Name = "lbl_itp";
+            this.lbl_itp.Size = new System.Drawing.Size(24, 13);
+            this.lbl_itp.TabIndex = 23;
+            this.lbl_itp.Text = "ITP";
+            // 
+            // lbl_rov
+            // 
+            this.lbl_rov.AutoSize = true;
+            this.lbl_rov.Location = new System.Drawing.Point(917, 265);
+            this.lbl_rov.Name = "lbl_rov";
+            this.lbl_rov.Size = new System.Drawing.Size(52, 13);
+            this.lbl_rov.TabIndex = 22;
+            this.lbl_rov.Text = "Rovinieta";
+            // 
+            // lbl_asig
+            // 
+            this.lbl_asig.AutoSize = true;
+            this.lbl_asig.Location = new System.Drawing.Point(917, 230);
+            this.lbl_asig.Name = "lbl_asig";
+            this.lbl_asig.Size = new System.Drawing.Size(51, 13);
+            this.lbl_asig.TabIndex = 21;
+            this.lbl_asig.Text = "Asigurare";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(468, 65);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 26;
+            // 
+            // btn_load
+            // 
+            this.btn_load.Location = new System.Drawing.Point(617, 65);
+            this.btn_load.Name = "btn_load";
+            this.btn_load.Size = new System.Drawing.Size(75, 23);
+            this.btn_load.TabIndex = 27;
+            this.btn_load.Text = "Load car";
+            this.btn_load.UseVisualStyleBackColor = true;
+            this.btn_load.Click += new System.EventHandler(this.btn_load_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1150, 471);
+            this.Controls.Add(this.btn_load);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.lbl_filtre);
+            this.Controls.Add(this.lbl_ulei);
+            this.Controls.Add(this.lbl_itp);
+            this.Controls.Add(this.lbl_rov);
+            this.Controls.Add(this.lbl_asig);
+            this.Controls.Add(this.lbl_type);
+            this.Controls.Add(this.lbl_engine);
+            this.Controls.Add(this.lbl_design);
+            this.Controls.Add(this.lbl_year);
+            this.Controls.Add(this.lbl_brand);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
@@ -290,5 +425,17 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lbl_type;
+        private System.Windows.Forms.Label lbl_engine;
+        private System.Windows.Forms.Label lbl_design;
+        private System.Windows.Forms.Label lbl_year;
+        private System.Windows.Forms.Label lbl_brand;
+        private System.Windows.Forms.Label lbl_filtre;
+        private System.Windows.Forms.Label lbl_ulei;
+        private System.Windows.Forms.Label lbl_itp;
+        private System.Windows.Forms.Label lbl_rov;
+        private System.Windows.Forms.Label lbl_asig;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btn_load;
     }
 }

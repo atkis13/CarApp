@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_addpic = new System.Windows.Forms.Button();
+            this.btn_addcar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt_brand = new System.Windows.Forms.TextBox();
+            this.txt_year = new System.Windows.Forms.TextBox();
+            this.txt_design = new System.Windows.Forms.TextBox();
+            this.txt_engine = new System.Windows.Forms.TextBox();
+            this.txt_type = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -54,23 +54,25 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // btn_addpic
             // 
-            this.button1.Location = new System.Drawing.Point(490, 447);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Select Picture";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_addpic.Location = new System.Drawing.Point(472, 448);
+            this.btn_addpic.Name = "btn_addpic";
+            this.btn_addpic.Size = new System.Drawing.Size(88, 23);
+            this.btn_addpic.TabIndex = 1;
+            this.btn_addpic.Text = "Select Picture";
+            this.btn_addpic.UseVisualStyleBackColor = true;
+            this.btn_addpic.Click += new System.EventHandler(this.btn_addpic_Click);
             // 
-            // button2
+            // btn_addcar
             // 
-            this.button2.Location = new System.Drawing.Point(123, 351);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Add";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_addcar.Location = new System.Drawing.Point(123, 351);
+            this.btn_addcar.Name = "btn_addcar";
+            this.btn_addcar.Size = new System.Drawing.Size(75, 23);
+            this.btn_addcar.TabIndex = 2;
+            this.btn_addcar.Text = "Add";
+            this.btn_addcar.UseVisualStyleBackColor = true;
+            this.btn_addcar.Click += new System.EventHandler(this.btn_addcar_Click);
             // 
             // label7
             // 
@@ -117,40 +119,40 @@
             this.label3.TabIndex = 11;
             this.label3.Text = "Brand";
             // 
-            // textBox1
+            // txt_brand
             // 
-            this.textBox1.Location = new System.Drawing.Point(141, 121);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 16;
+            this.txt_brand.Location = new System.Drawing.Point(141, 121);
+            this.txt_brand.Name = "txt_brand";
+            this.txt_brand.Size = new System.Drawing.Size(100, 20);
+            this.txt_brand.TabIndex = 16;
             // 
-            // textBox2
+            // txt_year
             // 
-            this.textBox2.Location = new System.Drawing.Point(141, 156);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 17;
+            this.txt_year.Location = new System.Drawing.Point(141, 156);
+            this.txt_year.Name = "txt_year";
+            this.txt_year.Size = new System.Drawing.Size(100, 20);
+            this.txt_year.TabIndex = 17;
             // 
-            // textBox3
+            // txt_design
             // 
-            this.textBox3.Location = new System.Drawing.Point(141, 194);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 18;
+            this.txt_design.Location = new System.Drawing.Point(141, 194);
+            this.txt_design.Name = "txt_design";
+            this.txt_design.Size = new System.Drawing.Size(100, 20);
+            this.txt_design.TabIndex = 18;
             // 
-            // textBox4
+            // txt_engine
             // 
-            this.textBox4.Location = new System.Drawing.Point(141, 229);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 19;
+            this.txt_engine.Location = new System.Drawing.Point(141, 229);
+            this.txt_engine.Name = "txt_engine";
+            this.txt_engine.Size = new System.Drawing.Size(100, 20);
+            this.txt_engine.TabIndex = 19;
             // 
-            // textBox5
+            // txt_type
             // 
-            this.textBox5.Location = new System.Drawing.Point(141, 265);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 20;
+            this.txt_type.Location = new System.Drawing.Point(141, 265);
+            this.txt_type.Name = "txt_type";
+            this.txt_type.Size = new System.Drawing.Size(100, 20);
+            this.txt_type.TabIndex = 20;
             // 
             // pictureBox2
             // 
@@ -166,18 +168,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(703, 501);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_type);
+            this.Controls.Add(this.txt_engine);
+            this.Controls.Add(this.txt_design);
+            this.Controls.Add(this.txt_year);
+            this.Controls.Add(this.txt_brand);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_addcar);
+            this.Controls.Add(this.btn_addpic);
             this.Controls.Add(this.pictureBox1);
             this.Name = "AddCar";
             this.Text = "Form1";
@@ -191,18 +193,18 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_addpic;
+        private System.Windows.Forms.Button btn_addcar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txt_brand;
+        private System.Windows.Forms.TextBox txt_year;
+        private System.Windows.Forms.TextBox txt_design;
+        private System.Windows.Forms.TextBox txt_engine;
+        private System.Windows.Forms.TextBox txt_type;
         private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

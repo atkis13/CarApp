@@ -15,11 +15,34 @@ namespace CarApp
         public Maintanance()
         {
             InitializeComponent();
+            comboBox1.Items.Add("Asigurare");
+            comboBox1.Items.Add("Rovinieta");
+            comboBox1.Items.Add("ITP");
+            comboBox1.Items.Add("Ulei");
+            comboBox1.Items.Add("Filtre");
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btn_close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Form_Methods.RemoveLatest(comboBox1.Text);
+                Form_Methods.AddMaint(comboBox1.Text, dateTimePicker1.Text, dateTimePicker2.Text, txt_cost.Text);
+                MessageBox.Show("Work Added");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                txt_cost.Text = "";
+            }
         }
     }
 }

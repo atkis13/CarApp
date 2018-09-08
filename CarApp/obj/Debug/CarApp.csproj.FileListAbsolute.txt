@@ -1,5 +1,4 @@
 E:\Git\Car_App\CarApp\CarApp\obj\Debug\CarApp.csprojResolveAssemblyReference.cache
-E:\Git\Car_App\CarApp\CarApp\obj\Debug\CarApp.Form1.resources
 E:\Git\Car_App\CarApp\CarApp\obj\Debug\CarApp.Properties.Resources.resources
 E:\Git\Car_App\CarApp\CarApp\obj\Debug\CarApp.csproj.GenerateResource.Cache
 E:\Git\Car_App\CarApp\CarApp\obj\Debug\CarApp.csproj.CoreCompileInputs.cache
@@ -14,3 +13,9 @@ E:\Git\Car_App\CarApp\CarApp\bin\Debug\MySql.Data.xml
 E:\Git\Car_App\CarApp\CarApp\bin\Debug\Newtonsoft.Json.xml
 E:\Git\Car_App\CarApp\CarApp\obj\Debug\CarApp.exe
 E:\Git\Car_App\CarApp\CarApp\obj\Debug\CarApp.pdb
+E:\Git\Car_App\CarApp\CarApp\obj\Debug\CarApp.Archive.resources
+E:\Git\Car_App\CarApp\CarApp\obj\Debug\CarApp.Current.resources
+E:\Git\Car_App\CarApp\CarApp\obj\Debug\CarApp.AddCar.resources
+E:\Git\Car_App\CarApp\CarApp\obj\Debug\CarApp.Login.resources
+E:\Git\Car_App\CarApp\CarApp\obj\Debug\CarApp.MainForm.resources
+E:\Git\Car_App\CarApp\CarApp\obj\Debug\CarApp.Maintanance.resources
