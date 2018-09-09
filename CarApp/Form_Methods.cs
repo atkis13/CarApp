@@ -7,6 +7,7 @@ using MySql.Data;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 using System.IO;
+using System.Data;
 
 namespace CarApp
 {
@@ -102,17 +103,24 @@ namespace CarApp
             return word + year.ToString();
         }
 
-        public static void AddWork()
+        public static void AddWork(string _work_date, string _work, string _cost, string _description)
         {
+            string query = "INSERT INTO current(work_date, work, cost, description) VALUES(@work_date, @work, @cost, @description);";
+            conn = new DBConnection();
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(query, conn.getConnection());
+            cmd.Parameters.AddWithValue("@work_date", _work_date);
+            cmd.Parameters.AddWithValue("@work", _work);
+            cmd.Parameters.AddWithValue("@cost", _cost);
+            cmd.Parameters.AddWithValue("@description", _description);          
+
+            cmd.ExecuteNonQuery();
+            conn.Close();
 
         }
 
         
-        public static void SearchLatest() //maintanance
-        {
-
-        }
-
+        
         public static void RemoveLatest(string maint) //maintanance
         {
             string query = "UPDATE maint SET latest =@nlatest WHERE maint =@maint AND latest =@latest;";
@@ -126,9 +134,28 @@ namespace CarApp
             conn.Close();
         }
 
-        public static void LoadData(string db_table)
+        public static void LoadData(DataGridView db_table, string flag)
         {
-
+            string query = null;
+            if(flag == "archive")
+            {
+                query = "Select * from old_owner;";
+            }
+            else if(flag == "current")
+            {
+                query = "Select * from current;";
+            }            
+            conn = new DBConnection();
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(query, conn.getConnection());
+            MySqlDataAdapter adap = new MySqlDataAdapter();
+            adap.SelectCommand = cmd;
+            DataTable db = new DataTable();
+            adap.Fill(db);
+            BindingSource bsourc = new BindingSource();
+            bsourc.DataSource = db;
+            db_table.DataSource = bsourc;
+            adap.Update(db);
         }
         public static void FillCombo(ComboBox cb)
         {

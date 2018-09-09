@@ -61,5 +61,17 @@ namespace CarApp
             Maintanance mt = new Maintanance();
             mt.Show();
         }
+
+        private void archiveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Archive arch = new Archive();
+            arch.Show();
+        }
+
+        private void currentExpansesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Current cr = new Current();
+            cr.Show();
+        }
     }
 }

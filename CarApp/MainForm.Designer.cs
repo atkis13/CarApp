@@ -98,20 +98,20 @@
             // newCarToolStripMenuItem
             // 
             this.newCarToolStripMenuItem.Name = "newCarToolStripMenuItem";
-            this.newCarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newCarToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.newCarToolStripMenuItem.Text = "New Car";
             this.newCarToolStripMenuItem.Click += new System.EventHandler(this.newCarToolStripMenuItem_Click);
             // 
             // loadCarToolStripMenuItem
             // 
             this.loadCarToolStripMenuItem.Name = "loadCarToolStripMenuItem";
-            this.loadCarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.loadCarToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.loadCarToolStripMenuItem.Text = "Load Car";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -130,12 +130,14 @@
             this.archiveToolStripMenuItem.Name = "archiveToolStripMenuItem";
             this.archiveToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.archiveToolStripMenuItem.Text = "Archive";
+            this.archiveToolStripMenuItem.Click += new System.EventHandler(this.archiveToolStripMenuItem_Click);
             // 
             // currentExpansesToolStripMenuItem
             // 
             this.currentExpansesToolStripMenuItem.Name = "currentExpansesToolStripMenuItem";
             this.currentExpansesToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.currentExpansesToolStripMenuItem.Text = "Current Expanses";
+            this.currentExpansesToolStripMenuItem.Click += new System.EventHandler(this.currentExpansesToolStripMenuItem_Click);
             // 
             // maintanaceToolStripMenuItem
             // 
