@@ -16,6 +16,7 @@ namespace CarApp
         public Login()
         {
             InitializeComponent();
+            pictureBox1.ImageLocation = Application.StartupPath + "@\\src\\logon.jpg";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -57,6 +58,11 @@ namespace CarApp
                 conn.Close();
                 
             }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
     
